@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace AMS
 {
     public class LogManagement 
@@ -57,13 +52,12 @@ namespace AMS
 
                         else if (users[i].RoleId == 2)
                         {
-                            teacher.MainMenu();
-
+                            teacher.MainMenu(user.Id);
                         }
 
                         else if (users[i].RoleId == 3)
                         {
-                            admin.MainMenu();
+                            student.MainMenu(user.Id);
 
                         }
 
@@ -71,7 +65,7 @@ namespace AMS
                     }
                     else
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Login Failed!");
                         Console.ForegroundColor = ConsoleColor.White;
                         break;
@@ -82,7 +76,7 @@ namespace AMS
 
         void LogInfo(string name, string role)
         {
-            Console.WriteLine($"{name} is Logged in as {role}");
+            Console.Title = $"{name} at Attendance System as {role}";
         }
     }
 }

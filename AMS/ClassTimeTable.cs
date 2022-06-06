@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace AMS
 {
-    public class Course
+    public class ClassTimeTable
     {
         public int Id { get; set; }
-        public string CourseName { get; set; }
-        public decimal Fees { get; set; }
-
-        public List<CourseStudent> Users { get; set; }
+        public int ScheduleId { get; set; }
+        public string ClassDate { get; set; }
     }
 }

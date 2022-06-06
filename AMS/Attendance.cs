@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace AMS
 {
-    public class Course
+    public class Attendance
     {
         public int Id { get; set; }
-        public string CourseName { get; set; }
-        public decimal Fees { get; set; }
-
-        public List<CourseStudent> Users { get; set; }
+        public int StudentId { get; set; }
+        public int TimingId { get; set; }
+        public bool IsAttend { get; set; }
     }
 }
