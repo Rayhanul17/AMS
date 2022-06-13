@@ -1,4 +1,4 @@
-# A Console Base Project in C#
+# A Console Based Project in C#
 Features: 
 1. Login
 2. Creating User(Admin, Teacher, Student)
